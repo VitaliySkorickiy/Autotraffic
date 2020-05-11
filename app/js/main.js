@@ -17,6 +17,8 @@ $(function () {
 
 
 
+  new WOW().init();
+ 
 
 
 

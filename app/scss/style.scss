@@ -12,6 +12,27 @@ html {
     border-spacing: inherit;
 }
 
+.title {
+    font-size: 50px;
+    text-align: center;
+    color: $blue;
+    font-weight: 700;
+    margin: 40px 0px;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        height: 2px;
+        width: 600px;
+        top: 60px;
+        background-color: $blue;
+        left: 25%;
+
+
+    }
+
+}
 
 .header__menu-up {
     display: flex;
@@ -349,29 +370,96 @@ html {
     }
 }
 
-//  =======  services  ========
+//  ===========  work  ===========
 
-.title {
-    font-size: 50px;
-    text-align: center;
-    color: $blue;
-    font-weight: 700;
-    margin-bottom: 30px;
-    position: relative;
+.work__wrapper {
+    margin-bottom: 50px;
+}
 
-    &::after {
-        content: '';
-        position: absolute;
-        height: 2px;
-        width: 600px;
-        top: 60px;
-        background-color: $blue;
-        left: 25%;
-
-
-    }
+.work__inner {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 20px;
 
 }
+
+.work__item {
+    max-width: 270px;
+    height: 350px;
+    transition: all 1s ease-out;
+    
+    &:hover{
+        -webkit-transform: scale(1.2);
+        -ms-transform: scale(1.2);
+        transform: scale(1.2);
+        
+    }
+
+    &-title {
+        font-size: 25px;
+        font-weight: 600;
+        color: $blue;
+        margin-bottom: 20px;
+    }
+
+    &-img {
+        height: 170px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    &-text {
+        padding: 10px;
+        background-color: $blue;
+        min-height: 100px;
+        color: #fff;
+
+        span {
+            font-size: 20px;
+            line-height: 25px;
+        }
+    }
+}
+
+
+
+//   ================  guarantee  ===========
+
+
+.guarantee {
+    background-image: url(../img/guaranteebg.jpg)
+}
+
+.guarantee__wrapper {
+    text-align: center;
+    padding: 100px 0px;
+    color: #fff;
+    background-color: rgba($color: $bluebg, $alpha: 0.9);
+
+}
+
+.guarantee-title {
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.guarantee-text {
+    margin: 0 auto;
+    max-width: 90%;
+}
+
+
+
+
+
+
+
+//  =======  services  ========
+
 
 .services {
     padding: 30px 0px;
@@ -394,9 +482,7 @@ html {
     width: 100%;
     box-shadow: 0px 0px 5px 1px $blue;
 
-    &-icon {
-        img {}
-    }
+
 
     &-text {
         font-size: 20px;
@@ -409,9 +495,23 @@ html {
     }
 }
 
-.services__item-icon {}
 
-.services__item-text {}
+// =========== clients =====
+
+.clients__wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0px;
+}
+
+.clients__img {
+    max-width: 150px;
+    width: 100%;
+    height: 100px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
 
 
 

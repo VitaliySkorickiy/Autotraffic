@@ -13,7 +13,6 @@ body {
     height: 100%;
     position: relative;
     font-family: 'icomoon', 'Lato', 'Roboto-Regular', sans-serif;
-    overflow-x: hidden;
 }
 
 // ==========================================
@@ -69,10 +68,8 @@ button {
     padding: 0 10px;
 }
 
-div {
-    // overflow: hidden;
 
-}
+
 
 // ======================================
 
@@ -111,6 +108,7 @@ div {
 
             a {
                 color: #b0bec5;
+                
             }
         }
     }
@@ -119,3 +117,5 @@ div {
 // ==    хлебные крошки  =============
 
 // ==========================================
+
+
