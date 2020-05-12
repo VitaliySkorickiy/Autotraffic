@@ -17,7 +17,7 @@ html {
     text-align: center;
     color: $blue;
     font-weight: 700;
-    margin: 40px 0px;
+    margin-bottom: 50px;
     position: relative;
 
     &::after {
@@ -207,7 +207,6 @@ html {
     border: none;
     max-height: 700px;
     height: 100%;
-
     position: relative;
 
     .form__wrapper {
@@ -372,28 +371,27 @@ html {
 
 //  ===========  work  ===========
 
-.work__wrapper {
-    margin-bottom: 50px;
+.work {
+    padding: 50px 0px;
 }
 
 .work__inner {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding-top: 20px;
 
 }
 
 .work__item {
     max-width: 270px;
-    height: 350px;
     transition: all 1s ease-out;
-    
-    &:hover{
+
+
+    &:hover {
         -webkit-transform: scale(1.2);
         -ms-transform: scale(1.2);
         transform: scale(1.2);
-        
+
     }
 
     &-title {
@@ -454,15 +452,11 @@ html {
 
 
 
-
-
-
-
 //  =======  services  ========
 
 
 .services {
-    padding: 30px 0px;
+    padding: 50px 0px;
 }
 
 .services__wrapper {
@@ -495,9 +489,72 @@ html {
     }
 }
 
+//  ==========  auto  ============
+
+.auto {
+    background-color: rgb(238, 244, 255);
+    padding: 50px 0px;
+}
+
+.auto__item {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-height: 300px;
+    margin-bottom: 20px;
+    padding: 30px;
+    background-color: #fff;
+
+    .info-title {
+        p {
+            font-size: 18px;
+            color: $blue;
+            margin-bottom: 20px;
+            margin-top: 0px;
+        }
+    }
+
+
+    &-img {
+        width: 450px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        transition: all 1s ease-out;
+
+
+        &:hover {
+            -webkit-transform: scale(1.2);
+            -ms-transform: scale(1.2);
+            transform: scale(1.2);
+    
+        }
+    }
+
+    &-info {
+        width: 250px;
+
+        p {
+            margin-top: 12px;
+        }
+        span{
+            float: right;
+            font-weight: 600;
+        }
+    }
+
+    &-text {
+        width: 400px;
+        padding-left: 20px;
+    }
+}
+
 
 // =========== clients =====
 
+.clients{
+    padding: 50px 0px;
+}
 .clients__wrapper {
     display: flex;
     justify-content: space-between;
