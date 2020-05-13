@@ -570,11 +570,60 @@ html {
     background-size: contain;
 }
 
+// ============  footer  ======
 
+.footer{
+    background-color: rgb(230, 230, 230);
+    padding: 50px 0px;
+}
 
+.footer__wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 50px;
+}
+.footer__item{
+    max-width: 365px;
 
+    .footer__title{
+        font-size: 22px;
+        font-weight: 600;
+        color: $blue;
+        margin-bottom: 15px;
+    }
 
+    .menu__logo{
+        margin-bottom: 15px;
+        height: 130px;
+        width: 130px;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
 
+    .menu__address{
+        margin-bottom: 20px;
+    }
+}
+.footer__soc{
+    text-align: center;
+    .menu__btn{
+        margin-top: 50px;
+    }
+}
+
+.footer__down{
+    text-align: center;
+    a{
+        
+        &:hover{
+            text-decoration: underline;
+            color: $blue;
+        }
+    }
+    
+}
 
 
 
