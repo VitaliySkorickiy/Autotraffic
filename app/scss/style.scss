@@ -708,14 +708,38 @@ html {
 }
 
 
+//   =========== error  ==============
 
 
+.error{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 600px;
+    max-width: 100%;
+    margin: 0 auto;
+}
 
+// ========= contacts  ===========
 
-
-
-
-
+.contacts__text{
+    line-height: 35px;
+    margin-bottom: 30px;
+    p{
+        font-size: 25px;
+        font-weight: 600;
+        a{
+            font-weight: 400;
+            margin-top: 10px;
+            &:hover{
+                color: $blue;
+            }
+        }
+    }
+    span{
+        font-size: 20px;
+    }
+}
 
 
 
