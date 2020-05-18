@@ -17,8 +17,27 @@ $(function () {
 
 
 
+  var nav = $('.header__menu-down');
+
+  $(window).scroll(function () {
+  	if ($(this).scrollTop() > 125) {
+  		nav.addClass("f-nav");
+  	} else {
+  		nav.removeClass("f-nav");
+  	}
+  });
+
+
+  $('.burger').on('click', function () {
+    $('.header__menu-down ul').slideToggle();
+
+  });
+
+
+
+
   new WOW().init();
- 
+
 
 
 

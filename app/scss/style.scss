@@ -134,14 +134,25 @@ html {
 }
 
 .header__menu-down {
-    max-height: 50px;
+    height: 50px;
     font-size: 16px;
     background-color: $bluebg;
+    position: relative;
 
+    ul,
+    li {
+        display: inline-block;
+        color: #000;
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+    }
 
     ul {
         display: flex;
         align-items: center;
+
     }
 
     a {
@@ -197,6 +208,25 @@ html {
     }
 }
 
+.burger {
+    position: absolute;
+    display: none;
+    margin-left: 15px;
+    top: 10px;
+    height: 30px;
+    width: 30px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.f-nav {
+    z-index: 9999;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
 
 
 
@@ -208,6 +238,8 @@ html {
     max-height: 700px;
     height: 100%;
     position: relative;
+
+
 
     .form__wrapper {
         font-size: 18px;
@@ -348,6 +380,7 @@ html {
     margin: 0px 10px;
     border: 2px solid $bluebg;
     background-color: $blue;
+    list-style: none;
 
     button {
         font-size: 0;
@@ -527,7 +560,7 @@ html {
             -webkit-transform: scale(1.2);
             -ms-transform: scale(1.2);
             transform: scale(1.2);
-    
+
         }
     }
 
@@ -537,7 +570,8 @@ html {
         p {
             margin-top: 12px;
         }
-        span{
+
+        span {
             float: right;
             font-weight: 600;
         }
@@ -552,9 +586,10 @@ html {
 
 // =========== clients =====
 
-.clients{
+.clients {
     padding: 50px 0px;
 }
+
 .clients__wrapper {
     display: flex;
     justify-content: space-between;
@@ -572,28 +607,39 @@ html {
 
 // ============  footer  ======
 
-.footer{
+.footer {
     background-color: rgb(230, 230, 230);
     padding: 50px 0px;
+
+    ul,
+    li {
+        display: inline-block;
+        color: #000;
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+    }
 }
 
-.footer__wrapper{
+.footer__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 50px;
 }
-.footer__item{
+
+.footer__item {
     max-width: 365px;
 
-    .footer__title{
+    .footer__title {
         font-size: 22px;
         font-weight: 600;
         color: $blue;
         margin-bottom: 15px;
     }
 
-    .menu__logo{
+    .menu__logo {
         margin-bottom: 15px;
         height: 130px;
         width: 130px;
@@ -602,28 +648,74 @@ html {
         background-repeat: no-repeat;
     }
 
-    .menu__address{
+    .menu__address {
         margin-bottom: 20px;
     }
 }
-.footer__soc{
+
+.footer__soc {
     text-align: center;
-    .menu__btn{
+
+    .menu__btn {
         margin-top: 50px;
     }
 }
 
-.footer__down{
+.footer__down {
     text-align: center;
-    a{
-        
-        &:hover{
+
+    a {
+
+        &:hover {
             text-decoration: underline;
             color: $blue;
         }
     }
-    
+
 }
+
+// ========== upload  ===========
+
+.upload {
+
+    .container {
+        background-color: rgb(238, 244, 255);
+    }
+
+}
+
+.upload-title {
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 40px;
+    color: $blue;
+    text-align: center;
+}
+
+.upload-content {
+    font-size: 20px;
+    line-height: 30px;
+
+    span {}
+
+    p {
+        font-size: 20px;
+        font-weight: 600;
+        margin: 30px 0px;
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
