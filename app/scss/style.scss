@@ -24,10 +24,13 @@ html {
         content: '';
         position: absolute;
         height: 2px;
-        width: 600px;
+        max-width: 600px;
+        width: 100%;
         top: 60px;
         background-color: $blue;
-        left: 25%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
 
 
     }
@@ -240,12 +243,11 @@ html {
     position: relative;
 
 
-
     .form__wrapper {
         font-size: 18px;
         color: $blue;
-        right: 100px;
-        top: 100px;
+        right: 10%;
+        top: 140px;
         position: absolute;
         max-width: 410px;
         width: 100%;
@@ -533,7 +535,6 @@ html {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    max-height: 300px;
     margin-bottom: 20px;
     padding: 30px;
     background-color: #fff;
@@ -565,7 +566,7 @@ html {
     }
 
     &-info {
-        width: 250px;
+        min-width: 250px;
 
         p {
             margin-top: 12px;
@@ -592,17 +593,21 @@ html {
 
 .clients__wrapper {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 40px 0px;
+    flex-wrap: wrap;
 }
 
 .clients__img {
     max-width: 150px;
+    min-width: 100px;
     width: 100%;
     height: 100px;
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    margin-bottom: 10px;
+ 
 }
 
 // ============  footer  ======
@@ -695,9 +700,6 @@ html {
 .upload-content {
     font-size: 20px;
     line-height: 30px;
-
-    span {}
-
     p {
         font-size: 20px;
         font-weight: 600;
@@ -711,7 +713,7 @@ html {
 //   =========== error  ==============
 
 
-.error{
+.error {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -722,28 +724,84 @@ html {
 
 // ========= contacts  ===========
 
-.contacts__text{
+.contacts__text {
     line-height: 35px;
     margin-bottom: 30px;
-    p{
+
+    p {
         font-size: 25px;
         font-weight: 600;
-        a{
+
+        a {
             font-weight: 400;
             margin-top: 10px;
-            &:hover{
+
+            &:hover {
                 color: $blue;
             }
         }
     }
-    span{
+
+    span {
         font-size: 20px;
     }
 }
 
+.contacts {
+    .title {
+        &::after {
+            content: '';
+            display: none;
+        }
+    }
+}
 
+.contacts__content {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+.contacts__text{
+    max-width: 400px;
+}
+.contacts__form {
+    background-color: rgba(52, 152, 219, .2);
+    border-radius: 8px;
+    padding: 10px;
+    font-size: 18px;
+    width: 550px;
 
+    .row {
+        display: block;
+        padding: 7px 8px;
+        margin-bottom: 7px;
 
+        label {
+            display: inline-block;
+            font-weight: bold;
+            width: 150px;
+            padding: 6px 0;
+            color: #464646;
+            vertical-align: top;
+        }
+        .req{
+            color: #ca5354;
+        }
+    }
+    .center{
+        text-align: center;
+        input{
+            cursor: pointer;
+        }
+       
+    }
+    button, input, optgroup, select, textarea {
+        width: 100%;
+        padding: 10px;
+        
+    }
+
+}
 
 
 
