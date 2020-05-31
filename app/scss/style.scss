@@ -418,14 +418,15 @@ html {
 }
 
 .work__item {
-    max-width: 270px;
+    width: 23%;
+    margin: 0px 10px 25px;
     transition: all 1s ease-out;
 
 
     &:hover {
-        -webkit-transform: scale(1.2);
-        -ms-transform: scale(1.2);
-        transform: scale(1.2);
+        -webkit-transform: scale(1.1);
+        -ms-transform: scale(1.1);
+        transform: scale(1.1);
 
     }
 
@@ -437,7 +438,9 @@ html {
     }
 
     &-img {
-        height: 170px;
+        width: 100%;
+        height: 0;
+        padding-bottom: 70%;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
@@ -558,9 +561,9 @@ html {
 
 
         &:hover {
-            -webkit-transform: scale(1.2);
-            -ms-transform: scale(1.2);
-            transform: scale(1.2);
+            -webkit-transform: scale(1.1);
+            -ms-transform: scale(1.1);
+            transform: scale(1.1);
 
         }
     }

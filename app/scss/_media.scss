@@ -1,4 +1,4 @@
-@media (max-width:1210px) {
+@media (max-width:1199px) {
 
   .burger {
     display: block;
@@ -50,8 +50,11 @@
     margin-right: 20px;
   }
 
+  .services__wrapper {
+    justify-content: space-between;
 
-
+  }
+  
 
 }
 
@@ -64,7 +67,7 @@
 
     &-img {
       width: 100%;
-      height: 400px;
+      height: 150px;
       background-size: contain;
 
       &:hover {
@@ -102,8 +105,18 @@
   .footer__soc {
     max-width: 215px;
   }
+}
 
 
+@media (max-width:1020px) {
+ 
+  .work__inner{
+    justify-content: space-around;
+  }
+
+  .work__item{
+    width: 45%;
+  }
 
 
 }
@@ -218,6 +231,7 @@
   .services__wrapper {
     justify-content: center;
   }
+ 
 
 }
 
@@ -225,11 +239,10 @@
 
 @media (max-width:559px) {
 
-  .work__item {
-    left: 0;
-    right: 0;
-    margin: 0 auto;
+  .work__inner {
+    align-items: stretch;
   }
+
 
 }
 
@@ -262,6 +275,14 @@
   }
 
 
+
+}
+
+@media (max-width:470px) {
+
+  .work__item{
+    width: 85%;
+  }
 
 }
 
