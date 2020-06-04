@@ -610,7 +610,7 @@ html {
     background-repeat: no-repeat;
     background-size: contain;
     margin-bottom: 10px;
- 
+
 }
 
 // ============  footer  ======
@@ -703,6 +703,7 @@ html {
 .upload-content {
     font-size: 20px;
     line-height: 30px;
+
     p {
         font-size: 20px;
         font-weight: 600;
@@ -764,9 +765,11 @@ html {
     justify-content: space-around;
     margin-bottom: 30px;
 }
-.contacts__text{
+
+.contacts__text {
     max-width: 400px;
 }
+
 .contacts__form {
     background-color: rgba(52, 152, 219, .2);
     border-radius: 8px;
@@ -776,7 +779,6 @@ html {
 
     .row {
         display: block;
-        padding: 7px 8px;
         margin-bottom: 7px;
 
         label {
@@ -787,25 +789,143 @@ html {
             color: #464646;
             vertical-align: top;
         }
-        .req{
+
+        .req {
             color: #ca5354;
         }
     }
-    .center{
+
+    .center {
         text-align: center;
-        input{
+
+        input {
             cursor: pointer;
         }
-       
+
     }
-    button, input, optgroup, select, textarea {
+
+    button,
+    input,
+    optgroup,
+    select,
+    textarea {
         width: 100%;
         padding: 10px;
-        
+
     }
 
 }
 
+.contact-map {
+    margin-bottom: 20px;
+}
+
+.popup {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    top: 0;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.8s ease 0s;
+
+    &__body {
+        min-height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 30px 10px;
+         
+    }
+}
+.popup:target {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup:target .popup__content{
+    transform: perspective(600px) translate(0px, 0px) rotate(0deg);
+    opacity: 1;
+}
+
+.popup__content {
+    background-color: #fff;
+    color: #000;
+    max-width: 500px;
+    padding: 30px;
+    position: relative;
+    border-radius: 8px;
+    transition: all 0.8s ease 0s;
+    opacity: 0;
+    transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+}
+
+.popup__close {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    font-size: 20px;
+    color: #000;
+    text-decoration: none;
+}
+.popup__form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+
+    input{
+        font-size: 20px;
+        padding: 8px;
+        margin: 10px 0;
+        outline-color: $blue;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        width: 100%;
+
+    }
+    a{
+        font-weight: 700;
+        margin-bottom: 15px;
+
+        &:hover{
+            color: $blue;
+        }
+    }
+   
+}
+.popup__form-title{
+    font-size: 35px;
+    padding: 0 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: $blue;
+    
+}
+.popup-btn{
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background: #60a3d8 linear-gradient(#89bbe2, #60a3d8 50%, #378bce);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+
+    &:hover {
+        color: rgb(255, 255, 255);
+        background: linear-gradient(#9dc7e7, #74afdd 50%, #378bce);
+    }
+}
+.popup__area{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
 
 
 @import 'media';

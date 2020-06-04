@@ -29,13 +29,13 @@
                         <a class="mail" href="mailto:Crimeacargo@mail.ru"> Crimeacargo@mail.ru</a>
                     </div>
                     <div class="menu__btn wow tada" data-wow-delay="2s" data-wow-iteration="2">
-                        <a href="#"> Личный кабинет</a>
+                        <a href="#popup"> Личный кабинет</a>
                     </div>
                 </div>
             </div>
 
         </div>
-        <div class="header__menu-down" id="data">
+        <div id="header__menu-down" class="header__menu-down" id="data">
             <div class="container">
                 <ul>
                     <li><a href="index.html">Главная</a></li>
@@ -539,6 +539,21 @@
     </section>
 
 
+    <div id="popup" class="popup">
+        <a class="popup__area" href="#header__menu-down"></a>
+        <div class="popup__body">
+            <div class="popup__content">
+                <a class="popup__close" href="#header__menu-down">X</a>
+                <form class="popup__form">
+                    <h3 class="popup__form-title">Авторизация</h3>
+                    <input type="text" placeholder="Логин" required>
+                    <input type="password" placeholder="Пароль" required>
+                    <a href="#">Забыли пароль?</a>
+                    <button class="popup-btn" type="submit">Войти</button>
+                </form>
+            </div>
+        </div>
+    </div>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
