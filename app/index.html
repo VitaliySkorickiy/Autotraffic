@@ -44,8 +44,8 @@
                     <li><a href="page404.html">услуги</a></li>
                     <li><a href="page404.html">автопарк</a></li>
                     <li><a href="contacts.html">контакты</a></li>
-                    <li><a class="calc" href="page404.html"> калькулятор</a></li>
-                    <li><a class="gruz" href="page404.html"> отследить груз</a></li>
+                    <li><a class="calc" href="#form__wrapper"> калькулятор</a></li>
+                    <li><a class="gruz" href="#form__wrapper"> отследить груз</a></li>
                     <li><a class="list" href="page404.html"> оформить заявку</a></li>
                 </ul>
                 <div class="burger" style="background-image: url(img/icons/burg.png);"></div>
@@ -99,8 +99,8 @@
 
 
 
-        <div class="form__wrapper wow fadeInTopRight" data-wow-delay="1s" data-wow-duration="2s">
-
+        <div id="form__wrapper" class="form__wrapper">
+            <a class="popup__close" href="#">X</a>
             <form class="form1">
                 <label>Откуда</label>
                 <input type="text" placeholder="Симферополь" required>
@@ -144,7 +144,7 @@
     <section class="work">
         <div class="container">
             <div class="work__wrapper">
-                <div class="title wow flip" data-wow-offset="200" data-wow-duration="2s">
+                <div class="title wow jello" data-wow-offset="200">
                     <p>этапы работы</p>
                 </div>
                 <div class="work__inner">
@@ -321,7 +321,7 @@
     <section class="auto">
         <div class="container">
 
-            <div class="title wow backInLeft" data-wow-offset="100">
+            <div class="title wow backInRight" data-wow-offset="100">
                 <p>Наш автопарк</p>
             </div>
 
@@ -329,22 +329,25 @@
             <div class="auto__inner">
 
                 <div class="auto__item">
-                    <div class="auto__item-img" style="background-image: url(img/auto/auto1.png);"></div>
 
-                    <div class="auto__item-info">
+                    
+                        <div class="auto__item-img" style="background-image: url(img/auto/auto1.png);"></div>
 
-                        <div class="info-title">
-                            <p>ПАРАМЕТРЫ КУЗОВА</p>
+                        <div class="auto__item-info">
+
+                            <div class="info-title">
+                                <p>ПАРАМЕТРЫ КУЗОВА</p>
+                            </div>
+
+                            <div class="info-info">
+                                <p>Длина <span>3 м</span> </p>
+                                <p>Ширина <span>2 м</span></p>
+                                <p>Высота <span>2.1 м</span> </p>
+                                <p>Объем <span>10 м&sup3</span></p>
+                                <p>Грузоподъемность <span>1.5 т</span></p>
+                            </div>
                         </div>
-
-                        <div class="info-info">
-                            <p>Длина <span>3 м</span> </p>
-                            <p>Ширина <span>2 м</span></p>
-                            <p>Высота <span>2.1 м</span> </p>
-                            <p>Объем <span>10 м&sup3</span></p>
-                            <p>Грузоподъемность <span>1.5 т</span></p>
-                        </div>
-                    </div>
+                   
 
                     <div class="auto__item-text">
                         <p>Подойдет для перевозки небольшого количества личных вещей и малогабаритной мебели. Очень
@@ -354,6 +357,10 @@
                             после транспортировки его не нужно включать в течение 3-х часов.</p>
                     </div>
                 </div>
+
+
+
+
 
                 <div class="auto__item">
 
@@ -463,7 +470,7 @@
                     style="background-image: url(img/clients/kl6.png);"></div>
             </div>
         </div>
-    </section> 
+    </section>
 
     <!-- ========== footer  ============= -->
 

@@ -147,7 +147,7 @@ html {
         display: inline-block;
         color: #000;
         margin: 0;
-        padding: 0;
+        padding: 0px;
         text-decoration: none;
         list-style: none;
     }
@@ -238,16 +238,14 @@ html {
 
 .slider {
     border: none;
-    max-height: 700px;
-    height: 100%;
     position: relative;
 
 
     .form__wrapper {
         font-size: 18px;
         color: $blue;
-        right: 10%;
-        top: 140px;
+        right: 5%;
+        top: 150px;
         position: absolute;
         max-width: 410px;
         width: 100%;
@@ -255,6 +253,8 @@ html {
         opacity: .9;
         border-radius: 8px;
         padding: 10px;
+        transition: all 0.8s ease 0s;
+        box-shadow: 0px 0px 20px $blue;
 
         .form1 {
             p {
@@ -262,7 +262,9 @@ html {
                 margin: 0;
 
             }
-
+            input{
+                border: 1px solid $blue;
+            }
             &>input,
             label {
                 width: 100%;
@@ -276,6 +278,7 @@ html {
 
                 p>input {
                     width: 100px;
+                    padding: 5px;
                 }
 
             }
@@ -289,6 +292,7 @@ html {
                 border: none;
                 outline: none;
                 cursor: pointer;
+                color: #fff;
 
                 &:hover {
                     color: rgb(255, 255, 255);
@@ -319,6 +323,7 @@ html {
                 border: none;
                 outline: none;
                 cursor: pointer;
+                color: #fff;
 
                 &:hover {
                     color: rgb(255, 255, 255);
@@ -343,10 +348,12 @@ html {
     padding: 0;
     height: 100%;
 
+
     &-img {
         overflow: hidden;
-        height: 700px;
         width: 100%;
+        height: 0;
+        padding-bottom: 40%;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
@@ -357,14 +364,12 @@ html {
             color: #fff;
             text-shadow: 3px 3px 0px $bluebg;
 
-            top: 50px;
-            left: 50px;
+            top: 10%;
+            margin-left: 10%;
 
             span {
-                font-size: 70px;
+                font-size: calc(20px + 40 *(100vw / 1200));
                 font-weight: 700;
-                line-height: 84px;
-                padding: 0px 10px;
             }
         }
     }
@@ -373,6 +378,7 @@ html {
 .slick-dots {
     display: flex;
     justify-content: center;
+    z-index: 2;
 }
 
 .slick-dots li {
@@ -554,6 +560,7 @@ html {
 
     &-img {
         width: 450px;
+        height: 200px;
         background-position: center;
         background-repeat: no-repeat;
         background-size: contain;
@@ -846,7 +853,7 @@ html {
 }
 
 .popup:target .popup__content{
-    transform: perspective(600px) translate(0px, 0px) rotate(0deg);
+    transform: perspective(600px) translate(0px, 0px) rotateX(0deg);
     opacity: 1;
 }
 
@@ -860,6 +867,7 @@ html {
     transition: all 0.8s ease 0s;
     opacity: 0;
     transform: perspective(600px) translate(0px, -100%) rotateX(45deg);
+    z-index: 5;
 }
 
 .popup__close {
