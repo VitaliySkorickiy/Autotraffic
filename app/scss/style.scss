@@ -60,11 +60,15 @@ html {
 }
 
 .menu__address {
-    font-size: 20px;
-    line-height: 30px;
     max-width: 365px;
     position: relative;
     padding-left: 40px;
+
+    span {
+        font-size: 20px;
+        line-height: 30px;
+
+    }
 
     &::before {
         content: '\f041';
@@ -78,11 +82,12 @@ html {
 }
 
 .menu__contact {
-    font-size: 20px;
-    line-height: 30px;
+
 
     a {
         display: block;
+        font-size: 20px;
+        line-height: 30px;
     }
 
     .tel {
@@ -109,12 +114,14 @@ html {
 }
 
 .menu__btn a {
+    background: #60a3d8 linear-gradient(#89bbe2, #60a3d8 50%, #378bce);
+    border-radius: 8px;
+    padding: 5px;
     color: #fff;
     text-transform: uppercase;
     font-weight: 600;
     padding: 15px;
-    background: #60a3d8 linear-gradient(#89bbe2, #60a3d8 50%, #378bce);
-    border-radius: 8px;
+
 
     &::before {
         content: '\f007';
@@ -238,33 +245,44 @@ html {
 
 .slider {
     border: none;
-    position: relative;
+
 
 
     .form__wrapper {
         font-size: 18px;
         color: $blue;
         right: 5%;
-        top: 150px;
+        top: 200px;
         position: absolute;
         max-width: 410px;
-        width: 100%;
         background-color: #fff;
         opacity: .9;
         border-radius: 8px;
         padding: 10px;
         transition: all 0.8s ease 0s;
         box-shadow: 0px 0px 20px $blue;
+        margin: 0;
+        z-index: 100;
+        overflow-x: hidden;
+
+        .popup__close {
+            opacity: 0;
+            padding: 5px;
+        }
 
         .form1 {
+            overflow-x: hidden;
+
             p {
                 padding: 10px;
                 margin: 0;
 
             }
-            input{
+
+            input {
                 border: 1px solid $blue;
             }
+
             &>input,
             label {
                 width: 100%;
@@ -313,6 +331,7 @@ html {
 
             input {
                 padding: 5px;
+                border: 1px solid $blue;
             }
 
             button {
@@ -420,27 +439,22 @@ html {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
+    align-items: stretch;
 }
 
 .work__item {
     width: 23%;
     margin: 0px 10px 25px;
-    transition: all 1s ease-out;
-
-
-    &:hover {
-        -webkit-transform: scale(1.1);
-        -ms-transform: scale(1.1);
-        transform: scale(1.1);
-
-    }
+    background-color: $blue;
+    border: 1px solid #fff;
+    overflow: hidden;
 
     &-title {
         font-size: 25px;
         font-weight: 600;
         color: $blue;
-        margin-bottom: 20px;
+        padding-bottom: 20px;
+        background-color: #fff;
     }
 
     &-img {
@@ -450,11 +464,20 @@ html {
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
+
+        transition: all 1s ease-out;
+
+        &:hover {
+            -webkit-transform: scale(1.05);
+            -moz-transform: scale(1.05);
+            -ms-transform: scale(1.05);
+            -o-transform: scale(1.05);
+            transform: scale(1.05);
+        }
     }
 
     &-text {
         padding: 10px;
-        background-color: $blue;
         min-height: 100px;
         color: #fff;
 
@@ -491,7 +514,9 @@ html {
 
 .guarantee-text {
     margin: 0 auto;
-    max-width: 90%;
+    max-width: 1300px;
+    line-height: 25px;
+    padding: 0 15px;
 }
 
 
@@ -514,22 +539,18 @@ html {
     margin: 10px;
     padding: 10px;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
     max-width: 275px;
     width: 100%;
     box-shadow: 0px 0px 5px 1px $blue;
 
-
+    &-icon {
+        padding-top: 5px;
+    }
 
     &-text {
         font-size: 20px;
         padding-left: 15px;
-
-        p {
-            margin-bottom: 10px;
-
-        }
+        padding-top: 5px;
     }
 }
 
@@ -710,6 +731,7 @@ html {
 .upload-content {
     font-size: 20px;
     line-height: 30px;
+    margin-bottom: 15px;
 
     p {
         font-size: 20px;
@@ -837,6 +859,7 @@ html {
     opacity: 0;
     visibility: hidden;
     transition: all 0.8s ease 0s;
+    z-index: 10;
 
     &__body {
         min-height: 100%;
@@ -844,15 +867,16 @@ html {
         align-items: center;
         justify-content: center;
         padding: 30px 10px;
-         
+
     }
 }
+
 .popup:target {
     opacity: 1;
     visibility: visible;
 }
 
-.popup:target .popup__content{
+.popup:target .popup__content {
     transform: perspective(600px) translate(0px, 0px) rotateX(0deg);
     opacity: 1;
 }
@@ -878,13 +902,14 @@ html {
     color: #000;
     text-decoration: none;
 }
-.popup__form{
+
+.popup__form {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
 
-    input{
+    input {
         font-size: 20px;
         padding: 8px;
         margin: 10px 0;
@@ -893,25 +918,28 @@ html {
         width: 100%;
 
     }
-    a{
+
+    a {
         font-weight: 700;
         margin-bottom: 15px;
 
-        &:hover{
+        &:hover {
             color: $blue;
         }
     }
-   
+
 }
-.popup__form-title{
+
+.popup__form-title {
     font-size: 35px;
     padding: 0 20px;
     font-weight: 700;
     text-transform: uppercase;
     color: $blue;
-    
+
 }
-.popup-btn{
+
+.popup-btn {
     width: 100%;
     margin-top: 15px;
     padding: 10px 20px;
@@ -927,7 +955,8 @@ html {
         background: linear-gradient(#9dc7e7, #74afdd 50%, #378bce);
     }
 }
-.popup__area{
+
+.popup__area {
     position: absolute;
     width: 100%;
     height: 100%;
